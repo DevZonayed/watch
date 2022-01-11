@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 3px;
+    stroke-dasharray: 186;
+    stroke-dashoffset: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 600px;
+    height: 600px;
+    background: url(./image/clock.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.clock_proggrase {
+    height: 70px;
+    width: 70px;
+    position: relative;
+    top: -62px;
+    left: -6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Digital clock start */
+.digital {
+    height: 264px;
+    width: 264px;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 160px);
+    left: calc(50% - 188px);
+    transform: rotateY(20deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec {
+    color: white;
+    position: relative;
+    font-size: 66px;
+    font-weight: 500;
+    bottom: -36px;
+    right: -48px;
+}
+.min {
+    color: white;
+    font-size: 75px;
+    position: absolute;
+    left: 40px;
+    top: 56px;
+}
+.hour{
+    color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.hour {
+    color: white;
+    position: absolute;
+    left: 38px;
+    bottom: 55px;
+    font-size: 78px;
+    font-weight: 700;
+    color: #ff2e98;
+}
+.second {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.munite{
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    transform: scale(0.8);
+}
+.munite circle{
+    stroke: white;
+    stroke-dasharray: 154;
+    stroke-dashoffset: 0;
+}
+@keyframes secanim {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dashoffset: 154;
+    }
+}
